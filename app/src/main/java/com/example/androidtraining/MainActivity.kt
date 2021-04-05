@@ -10,60 +10,48 @@ import com.example.androidtraining.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     // TODO: lateinit var binding
-    private lateinit var binding: ActivityMainBinding
 
-    // TODO: lateinit var viewModel
+
     private lateinit var mainActivityViewModel: MainActivityViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Inflate view with viewBinding
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        // TODO: inflar la vista con ViewBingin
 
-        // TODO: call fun instances
-        instances()
 
-        // TODO: call fun observers
-        observers()
+        // TODO: llamar a la funcion instances
 
-        // TODO: call fun loadUrlWebView
-        loadUrlWebView()
 
-        // TODO: Load viewBinding
-        setContentView(binding.root)
+        // TODO: llamar a la funcion observers
+
+
+        // TODO: llamar a la funcion loadUrlWebView
+
+
+        // TODO: cargar el viewBinding con setContentView
+
     }
 
     private fun instances() {
         mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
 
-        binding.apply {
-            viewModel = mainActivityViewModel
-            lifecycleOwner = this@MainActivity
-        }
+        // TODO: Vincular el ViewModel con la vista y asignar el lifecycleOwner a la actividad
+
     }
 
     private fun observers() {
-        mainActivityViewModel.model.observe(this, Observer(::updateUi))
+        // TODO: Observar la variable model del ViewModel en la funcion updateUi()
+
     }
 
-    private fun updateUi(model: MainActivityViewModel.UiModel) {
-        when (model) {
-            MainActivityViewModel.UiModel.NavigateToFragment -> navigateToFragment(
-                FragmentWithToolbar()
-            )
-        }
-    }
+    // TODO: Crear un funcion llamada updateUi() donde se le pase el model del ViewModel, escuchar el evento de NavigateToFragment y llamar a la funcion navigateToFragment
 
-    // TODO: Create a private function that loads a url (https://kotlinlang.org/) to the webView and enable javascript
-    private fun loadUrlWebView() {
-        binding.containerWebview.apply {
-            settings.javaScriptEnabled = true
-            loadUrl("https://kotlinlang.org/")
-        }
-    }
 
-    // TODO: create private function that load fragments in FragmentContainerView
+    // TODO: Crear una funcion llamada loadUrlWebView cargando la url (https://kotlinlang.org/) en el webview y habilitando javascript
+
+
     private fun navigateToFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(
             R.id.fragment_container,

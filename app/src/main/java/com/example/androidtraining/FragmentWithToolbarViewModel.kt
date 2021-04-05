@@ -12,19 +12,18 @@ class FragmentWithToolbarViewModel : ViewModel() {
     private val _randomText = MutableLiveData<String>()
     val randomText: LiveData<String> get() = _randomText
 
+    // TODO: Asignar el valor que devuelve la funcion randomText()
     init {
-        _randomText.value = randomText()
+
     }
 
     sealed class UiModel {
         object NavigateBack : UiModel()
     }
 
-    fun onClickBack() {
-        _model.value = UiModel.NavigateBack
-    }
+    // TODO: funcion onClick de la flecha para volver atrás
 
-    private fun randomText(): String {
-        return listOf("Prueba 1", "Prueba 2", "Prueba 3", "Prueba 4").random()
-    }
+
+    // TODO: Funcion que devuelva de una lista de Strings uno de forma aleatoria. Llamar a la funcion randomText()
+
 }

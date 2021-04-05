@@ -10,15 +10,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
 
-    <style name="LabelTitleToolbar" parent="Widget.AppCompat.TextView">
-        <item name="maxLines">1</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@android:color/black</item>
-    </style>
+    <!-- TODO: Estilo con un tamaño de 18sp y color de texto negro que extienda de TextView. Estilo para el titulo de la Toolbar -->
 
-    <style name="LabelTitle" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">40sp</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
+
+    <!-- TODO: Estilo con un tamaño de 40sp, color de texto negro, fuente en negrita y que extienda de TextView. Estilo para el texto aleatorio -->
+
 </resources>

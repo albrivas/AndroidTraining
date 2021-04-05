@@ -35,10 +35,8 @@ class FragmentWithToolbar : Fragment() {
     private fun instances() {
         fragmentWithToolbarViewModel = ViewModelProvider(this).get(FragmentWithToolbarViewModel::class.java)
 
-        with(binding) {
-            lifecycleOwner = viewLifecycleOwner
-            viewModel = fragmentWithToolbarViewModel
-        }
+        // TODO: Vincular el ViewModel con la vista y asignar el lifecycleOwner
+
     }
 
     private fun updateUi(model: FragmentWithToolbarViewModel.UiModel) {
